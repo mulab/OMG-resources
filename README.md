@@ -36,6 +36,7 @@ Make sure you have the following abilities before you can continue to next secti
 
 - [Docker](#docker)
 - [Web](#web)
+- [Database](#database)
 - [Other](#other)
 
 ### Docker
@@ -76,6 +77,15 @@ In Lab μ, we prefer nginx over apache. (Cauze we are farmiliar with nginx.)
 http_core_module: http://nginx.org/en/docs/http/ngx_http_core_module.html
 
 Currently the service discovery relies on dns, but nginx has dns cache, which cause some issues. The solution should be replaced with using consul-template and dynamic generate nginx configs when container changes.
+
+### Database
+
+Although this should be DBA's job, since we do not have dba yet, database is also mantained by ops.
+As this is an expert topic, we only list databases that may be used below:
+
+- Mysql
+- Mongodb
+- Postgre
 
 ### Other
 
