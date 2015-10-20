@@ -34,4 +34,59 @@ Make sure you have the following abilities before you can continue to next secti
 
 ## Tables of Content
 
-TBD.
+- [Docker](#docker)
+- [Web](#web)
+- [Other](#other)
+
+### Docker
+
+#### Dockerfile
+
+- Reference: https://docs.docker.com/reference/builder/
+- DockerHub: https://hub.docker.com/
+- Lab μ dockerfile collection: https://github.com/mulab/Dockerfile
+  - It's old, and ** most ** of them should not be used in production.
+  - But we can improve it by make contributions to the repo!
+
+#### Docker-compose
+- Docker-compose(previous known as fig) overview: https://docs.docker.com/compose/
+- Docker-compose yml: https://docs.docker.com/compose/yml/
+- Docker-compose command line: https://docs.docker.com/compose/reference/docker-compose/
+
+#### Docker-swarm
+
+Months ago, swarm is not stable enough to use, but things must be different now, need further studying.
+
+#### Consul
+
+In Lab μ, we use consul as service discovery. 
+
+- Consul: https://github.com/hashicorp/consul https://www.consul.io/
+
+But it must have changed over the last 3-6 months, and need to be upgrade.
+
+Lab μ consul installation backlog: https://github.com/mulab/intro/wiki/Consul-%E6%8C%87%E5%8D%97
+
+### Web
+
+#### Nginx
+
+In Lab μ, we prefer nginx over apache. (Cauze we are farmiliar with nginx.)
+
+http_core_module: http://nginx.org/en/docs/http/ngx_http_core_module.html
+
+Currently the service discovery relies on dns, but nginx has dns cache, which cause some issues. The solution should be replaced with using consul-template and dynamic generate nginx configs when container changes.
+
+### Other
+
+#### Supervisord
+
+Although most of the applications run inside docker, and docker has a `restart=always` option, sometimes you need to run some executation outside docker, and since we are not farmiliar with init.d or something like that, we choose supervisord.
+
+some example: http://supervisord.org/configuration.html#program-x-section-example
+
+#### VPN
+
+In Lab μ, we use openvpn to connect all the servers to a local network. Some configuration are needed to make containers on different host discover each other without problem. Typically, container network should be solved by libnetwork, or weave or integrated solutions in etcd/k8s.
+
+Lab μ openvpn installation backlog: https://github.com/mulab/intro/wiki/VPN%E6%8C%87%E5%8D%97
