@@ -8,7 +8,7 @@ Make sure you have the following abilities before you can continue to next secti
 - [ ] Cross the GFW. You'll need google search for the reset of the requirements. Baidu is a terrible search engine for techniques.
 - [ ] Search in English. Prefer searching in English to in Chinese, which will provide much more precise result.
 - [ ] Basic programming skills. [Python][python] is the most basic language you should know.
-  If you didn't know python at all, pick up [this site][python-learn] and quickly go through the interactive tutorials, including basic and advantage sections.
+  If you didn't know python at all, pick up [this site][learn-python] and quickly go through the interactive tutorials, including basic and advantage sections.
   If you encounter any problem, never mind, just skip them, since you may not use that knownledge at all, or you may reference to [python doc][python-doc].
   Python 3 is prefered over python 2, but by default, system python is always python 2, so try to know the difference between them, the version's difference should not be of too much trouble.
   Other language that you should take at a glance: [golang][golang], [node][node]
