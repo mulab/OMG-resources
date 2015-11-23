@@ -60,3 +60,8 @@ Since this assignment may be a bit more difficult for starters, we can hold up a
 ## Submission
 
 Fork this repo, add the template file named with `[your github id].tmpl` in this folder and open a pull request.
+
+## Discussion
+
+It seems that if a service is restarted, simply reload nginx will make all things right. The only problem remains is that when we restart
+the host, nginx will fail to start since some of the sites'upstream domain are not available. So the simplest solution may be: dynamic add conf to sites-enable when container starts and remove conf when container stops.
